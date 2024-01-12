@@ -1,35 +1,20 @@
-import express from 'express'
-import mongoose from 'mongoose'
-import morgan from 'morgan'
-import helmet from 'helmet'
-import cors from 'cors'
-import bodyParser from 'body-parser'
-import dotenv from 'dotenv'
-dotenv.config()
+import dotenv from 'dotenv';
+import { connectToMongoDB } from './config/mongo.js';
+import app from './middlewares/middleware.js';
 
-const app = express()
-const PORT = process.env.PORT || 5000
-const MONGODB_URI = process.env.MONGODB_URI
+dotenv.config();
 
-// Middleware
-app.use(morgan('dev'))
-app.use(helmet())
-app.use(cors())
-app.use(bodyParser.json())
+const PORT = process.env.PORT || 5000;
+const MONGODB_URI = process.env.MONGODB_URI;
 
 // MongoDB Connection
-mongoose.connect(MONGODB_URI)
+connectToMongoDB(MONGODB_URI);
 
-const db = mongoose.connection
-db.on('error', console.error.bind(console, 'Error de conexión a MongoDB:'))
-db.once('open', () => {
-  console.log('Conexión exitosa a MongoDB')
-})
-
+// Routes
 app.get('/', (req, res) => {
-  res.send('Hola, bienvenido a tu API Node.js con Express y MongoDB.')
-})
+  res.send('Hola, bienvenido a tu API Node.js con Express y MongoDB.');
+});
 
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`)
-})
+  console.log(`Server runing in: http://localhost:${PORT}`);
+});
