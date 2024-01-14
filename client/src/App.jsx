@@ -1,7 +1,14 @@
+import Menu from './components/Menu'
+
 const App = () => {
   return (
-    <div className="p-5 text-xl">
-      <p className="text-yellow-700">The Mathematical Route</p>
+    <div className="flex flex-row w-full h-screen">
+      <div className="w-1/5">
+        <Menu />
+      </div>
+      <div className="flex flex-col p-2 w-4/5">
+        <p className="text-yellow-700">The Mathematical Route</p>
+      </div>
     </div>
   )
 }
