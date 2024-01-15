@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 import { connectToMongoDB } from './config/mongo.js';
 import app from './middlewares/middleware.js';
-import router from './routes/route.js';
+import router from './routes/routes.js';
 
 dotenv.config();
 
