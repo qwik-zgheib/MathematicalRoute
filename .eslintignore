@@ -1,0 +1,3 @@
+# tailwindcss files ignore
+postcss.config.js
+tailwind.config.js
