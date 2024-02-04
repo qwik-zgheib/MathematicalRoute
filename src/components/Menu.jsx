@@ -15,11 +15,10 @@ const SearchInput = () => {
   )
 }
 
-
 const Menu = () => {
   return (
     <div className="flex flex-col p-2 bg-[#D9C7A7] w-1/5">
-      <Title/>
+      <Title />
       <p className="text-red-900">The Mathematical Route</p>
       <SearchInput />
 
