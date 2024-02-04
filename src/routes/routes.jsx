@@ -15,7 +15,7 @@ const router = createBrowserRouter([
         element: <App />,
         children: [
           {
-            path: 'limits',
+            path: 'limites',
             element: <Limits />,
           },
           {
