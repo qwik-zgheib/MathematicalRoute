@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import { Title } from './Title'
 
 const SearchInput = () => {
@@ -17,16 +17,19 @@ const SearchInput = () => {
 
 const Menu = () => {
   return (
-    <div className="flex flex-col p-2 bg-[#D9C7A7] w-1/5">
-      <Title />
-      <p className="text-red-900">The Mathematical Route</p>
-      <SearchInput />
+    <div className="flex flex-row">
+      <div className="flex flex-col p-2 bg-[#D9C7A7] w-1/5">
+        <Title />
+        <p className="text-red-900">The Mathematical Route</p>
+        <SearchInput />
 
-      <div className="p-2">
-        <p>Topics</p>
-        <Link to="/limites">Limits</Link>
-        <Link to="/derivadas">derivadas</Link>
+        <div className="p-2">
+          <p>Topics</p>
+          <Link to="/limites">Limits</Link>
+          <Link to="/derivadas">derivadas</Link>
+        </div>
       </div>
+      <Outlet />
     </div>
   )
 }
