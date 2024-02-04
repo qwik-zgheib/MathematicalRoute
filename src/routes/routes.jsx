@@ -1,22 +1,27 @@
-import {createBrowserRouter} from "react-router-dom";
-import { Limits } from "../components/Limits";
-import {Derivadas} from "../components/Derivadas"
-import App from "../App";
+import { createBrowserRouter } from 'react-router-dom'
+import { Limits } from '../components/Limits'
+import { Derivadas } from '../components/Derivadas'
+import App from '../App'
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: 
-      <App/>
-    ,
+    path: '/',
+    element: <App />,
+    // children: [
+    //   {
+    //     path: 'contact',
+    //     element: <Contact />,
+    //   },
+    // ],
   },
   {
-    path: "limites",
+    path: 'limites',
     element: <Limits />,
   },
   {
-    path: "derivadas",
+    path: 'derivadas',
     element: <Derivadas />,
   },
-]);
+])
+
 export default router

@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
-
+import { Title } from './Title'
 
 const SearchInput = () => {
   return (
@@ -18,7 +18,8 @@ const SearchInput = () => {
 
 const Menu = () => {
   return (
-    <div className="flex flex-col p-2 bg-gray-50">
+    <div className="flex flex-col p-2 bg-[#D9C7A7] w-1/5">
+      <Title/>
       <p className="text-red-900">The Mathematical Route</p>
       <SearchInput />
 
