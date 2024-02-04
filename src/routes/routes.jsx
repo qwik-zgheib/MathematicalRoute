@@ -2,13 +2,13 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import { Limits } from '../components/Limits'
 import { Derivadas } from '../components/Derivadas'
-import Menu from '../components/Menu'
 import App from '../App'
+import Navbar from '../components/Navbar'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Menu />,
+    element: <Navbar />,
     children: [
       {
         path: '',
