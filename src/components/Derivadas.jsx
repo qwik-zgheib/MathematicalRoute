@@ -1,4 +1,8 @@
+import Menu from "./Menu"
 export function Derivadas(){
-    return (<h1>Derivadas</h1>)
+    return ( <div>
+        <Menu/>
+        <h1>Derivadas</h1> 
+     </div>)
 }
 

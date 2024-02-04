@@ -1,5 +1,4 @@
 import Menu from './components/Menu'
-import { Link } from 'react-router-dom'
 const App = () => {
   return (
     <div className="flex flex-row w-full h-screen bg-slate-700">

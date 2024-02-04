@@ -1,4 +1,11 @@
+import Menu from "./Menu"
 export function Limits(){
-    return (<h1>Limites</h1>)
+    return (
+        <div>
+           <Menu/>
+           <h1>Limites</h1> 
+        </div>
+    
+    )
 }
 
