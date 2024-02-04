@@ -1,19 +1,20 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-
-const Title = () => {
-  return <h1 className="text-red-700">THΞ MΔTHEMΔTICΔL RΘUTΞ</h1>
-}
+import styles from '../styles/Navbar.module.css'
+import Title from '../components/Title'
+import { SearchInput } from './SearchInput'
 
 const Navbar = () => {
   return (
-    <div className="flex flex-col">
-      <div className="flex flex-row">
+    <div>
+      <div className={styles.container}>
         <div>left</div>
         <div className="title">
           <Title />
         </div>
-        <div>right</div>
+        <div>
+          <SearchInput />
+        </div>
       </div>
       <Outlet />
     </div>

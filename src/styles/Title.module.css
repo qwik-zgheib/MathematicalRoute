@@ -1,0 +1,9 @@
+.text {
+  color: #ece5d1;
+  font-weight: 600;
+  font-size: 1.7em;
+  text-shadow: 2px 1px 2px rgb(0, 0, 0);
+}
+.deco {
+  color: #ad0909;
+}

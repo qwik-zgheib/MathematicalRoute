@@ -1,6 +1,7 @@
+import style from '../styles/Integrales.module.css'
 export function Integrales() {
   return (
-    <div className={`flex flex-row w-full h-screen`}>
+    <div className={style.container}>
       <h1>integrales</h1>
     </div>
   )

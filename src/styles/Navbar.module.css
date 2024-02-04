@@ -1,33 +1,18 @@
 .container {
   width: 100vw;
-  position: fixed;
+  position: absolute;
   height: 9vh;
   top: 0;
   background: #1b2c3e;
-}
-
-.box {
-  width: 100%;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
-  position: relative;
-  height: 100%;
+  display: flex;
+  z-index: 3;
 }
-
-.listabox {
-  background: #242424;
-  width: 100vw;
+.menu {
   position: absolute;
-  height: 30%;
-  bottom: 0px;
-}
-
-.search {
+  height: 100vh;
   position: relative;
-}
-
-.searchi {
-  position: absolute;
-  right: 15vw;
+  top: 9vh;
+  width: 22vh;
+  background: #d9c7a7;
 }

@@ -1,6 +1,7 @@
+import style from '../styles/Derivadas.module.css'
 export function Derivadas() {
   return (
-    <div className="flex flex-row w-full h-screen bg-[#ECE5D1]">
+    <div className={style.container}>
       <h1>Derivadas</h1>
     </div>
   )

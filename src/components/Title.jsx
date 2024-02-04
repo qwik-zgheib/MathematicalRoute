@@ -1,3 +1,10 @@
-export function Title() {
-  return <h1 className="text-red-700">THΞ MΔTHEMΔTICΔL RΘUTΞ</h1>
+import styles from '../styles/Title.module.css'
+export default function Title() {
+  return (
+    <div>
+      <h1 className={styles.text}>
+        THΞ MΔTHEMΔTICΔL R<span className={styles.deco}>Θ</span>UTΞ
+      </h1>
+    </div>
+  )
 }
