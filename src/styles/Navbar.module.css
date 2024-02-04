@@ -4,21 +4,28 @@
   height: 9vh;
   top: 0;
   background: #1b2c3e;
-  display: flex;
   overflow: hidden;
 }
 .box {
   width: 100%;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   height: 100%;
 }
+
 .listabox {
-  background: #ffffff;
+  background: #242424;
   width: 100vw;
   position: absolute;
   height: 30%;
-  bottom: 1px;
+  bottom: 0px;
+}
+.search {
+  position: relative;
+}
+.searchi {
+  position: absolute;
+  right: 15vw;
 }
