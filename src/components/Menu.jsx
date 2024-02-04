@@ -24,8 +24,12 @@ const Menu = () => {
 
       <div className="p-2">
         <p>Topics</p>
-        <Link to="/limites">Limits</Link>
-        <Link to="/derivadas">derivadas</Link>
+        <markdown>
+        <markdown> <Link to="/funciones">Funciones</Link> </markdown>
+        <markdown> <Link to="/limites">Limits</Link> </markdown>
+        <Link to="/derivadas">Derivadas</Link> </markdown> 
+        <markdown> <Link to="/integrales">Integrales</Link> </markdown>
+        
       </div>
     </div>
   )
