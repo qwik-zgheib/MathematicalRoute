@@ -1,4 +1,8 @@
 .container {
-  @apply bg-slate-700;
-  color: aqua;
+  color: #ece5d1;
+  font-size: 1.63rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 1px rgb(236, 74, 74);
+  margin-bottom: 50px;
+
 }
