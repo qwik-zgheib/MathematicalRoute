@@ -1,7 +1,9 @@
 import Menu from './components/Menu'
+import Navbar from './components/Navbar'
 const App = () => {
   return (
-    <div className="flex flex-row w-full h-screen bg-slate-700">
+    <div className="bg-[#ECE5D1]">
+      <Navbar />
       <div className="w-1/5">
         <Menu />
       </div>
