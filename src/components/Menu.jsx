@@ -19,11 +19,13 @@ const Menu = () => {
     <div className="flex flex-col p-2 bg-[#D9C7A7] h-[100vh]">
       <div className="p-2">
         <p>Topics</p>
-        <markdown>
-        <markdown> <Link to="/funciones">Funciones</Link> </markdown>
-        <markdown> <Link to="/limites">Limits</Link> </markdown>
-        <Link to="/derivadas">Derivadas</Link> </markdown> 
-        <markdown> <Link to="/integrales">Integrales</Link> </markdown>
+        <ul>
+          <li><Link to="/funciones">Funciones</Link></li>
+          <li><Link to="/limites">Limits</Link></li>
+          <li><Link to="/derivadas">Derivadas</Link> </li>
+          <li><Link to="/integrales">Integrales</Link></li>
+        </ul>
+
         
       </div>
     </div>
