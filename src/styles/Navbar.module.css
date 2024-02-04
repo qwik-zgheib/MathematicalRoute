@@ -4,8 +4,8 @@
   height: 9vh;
   top: 0;
   background: #1b2c3e;
-  overflow: hidden;
 }
+
 .box {
   width: 100%;
   display: flex;
@@ -22,9 +22,11 @@
   height: 30%;
   bottom: 0px;
 }
+
 .search {
   position: relative;
 }
+
 .searchi {
   position: absolute;
   right: 15vw;

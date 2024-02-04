@@ -4,8 +4,8 @@ import { Limits } from '../components/Limits'
 import { Derivadas } from '../components/Derivadas'
 import { Funciones } from '../components/Funciones'
 import { Integrales } from '../components/Integrales'
-import App from '../App'
 import Navbar from '../components/Navbar'
+import Menu from '../components/Menu'
 
 const router = createBrowserRouter([
   {
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <App />,
+        element: <Menu />,
         children: [
           {
             path: 'limites',

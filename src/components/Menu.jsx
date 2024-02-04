@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 import styles from '../styles/Navbar.module.css'
 export const SearchInput = () => {
   return (
@@ -16,18 +16,27 @@ export const SearchInput = () => {
 
 const Menu = () => {
   return (
-    <div className="flex flex-col p-2 bg-[#D9C7A7] h-[100vh]">
-      <div className="p-2">
-        <p>Topics</p>
-        <ul>
-          <li><Link to="/funciones">Funciones</Link></li>
-          <li><Link to="/limites">Limits</Link></li>
-          <li><Link to="/derivadas">Derivadas</Link> </li>
-          <li><Link to="/integrales">Integrales</Link></li>
-        </ul>
-
-        
+    <div className="flex flex-row">
+      <div className="flex flex-col p-2 bg-[#D9C7A7] h-[100vh]">
+        <div className="p-2">
+          <p>Topics</p>
+          <ul>
+            <li>
+              <Link to="/funciones">Funciones</Link>
+            </li>
+            <li>
+              <Link to="/limites">Limits</Link>
+            </li>
+            <li>
+              <Link to="/derivadas">Derivadas</Link>
+            </li>
+            <li>
+              <Link to="/integrales">Integrales</Link>
+            </li>
+          </ul>
+        </div>
       </div>
+      <Outlet />
     </div>
   )
 }
