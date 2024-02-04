@@ -1,5 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
+import { Limits } from './Limits'
 
 const SearchInput = () => {
   return (
@@ -13,7 +15,6 @@ const SearchInput = () => {
   )
 }
 
-const topics = ['limits', 'derivative', 'integral']
 
 const Menu = () => {
   return (
@@ -23,11 +24,8 @@ const Menu = () => {
 
       <div className="p-2">
         <p>Topics</p>
-        <ul>
-          {topics.map((topic) => (
-            <li key={topic}>{topic}</li>
-          ))}
-        </ul>
+        <Link to="/limites">Limits</Link>
+        <Link to="/derivadas">derivadas</Link>
       </div>
     </div>
   )
