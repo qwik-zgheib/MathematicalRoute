@@ -17,19 +17,20 @@ const router = createBrowserRouter([
         element: <Menu />,
         children: [
           {
-            path: 'limites',
-            element: <Limits />,
-          },
-          {
-            path: 'derivadas',
-            element: <Derivadas />,
-          },
-          {
-            path: 'funciones',
+            path: 'functions',
             element: <Funciones />,
           },
           {
-            path: 'integrales',
+            path: 'limits',
+            element: <Limits />,
+          },
+          {
+            path: 'derivatives',
+            element: <Derivadas />,
+          },
+
+          {
+            path: 'integrals',
             element: <Integrales />,
           },
         ],

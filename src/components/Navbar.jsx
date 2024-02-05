@@ -11,13 +11,16 @@ const Navbar = () => {
         <div>
           <img className={styles.image} src="/src/assets/images/logoxaturn.png" />
         </div>
+
         <div className="title">
           <Title />
         </div>
+
         <div>
           <SearchInput />
         </div>
       </div>
+
       <Outlet />
     </div>
   )

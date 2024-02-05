@@ -9,6 +9,7 @@
   z-index: 3;
 
 }
+
 .menu {
   position: absolute;
   height: 100vh;
@@ -22,6 +23,7 @@
     }
   }
 }
+
 .image {
   position: relative;
   max-width: 40px;
