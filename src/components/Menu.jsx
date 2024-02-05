@@ -6,7 +6,7 @@ const Menu = () => {
     <div className="flex flex-row">
       <div className={styles.menu}>
         <div className="p-2">
-          <p>Topics</p>
+          <p className="font-bold text-left text-[1.1rem] text-[#ad0909] my-3 delay-100">📕 Temas</p>
           <ul>
             <li>
               <Link to="/funciones">Funciones</Link>
