@@ -1,6 +1,6 @@
 .container {
   width: 100vw;
-  position: absolute;
+  position: fixed;
   height: 9vh;
   top: 0;
   background: #1b2c3e;
@@ -16,4 +16,9 @@
   top: 9vh;
   width: 22vh;
   background: #d9c7a7;
+}
+.image {
+  position: relative;
+  max-width: 40px;
+  margin: 10px 20px;
 }
