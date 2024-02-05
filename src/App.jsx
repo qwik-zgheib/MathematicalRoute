@@ -1,6 +1,6 @@
 import { RouterProvider } from 'react-router-dom'
 import Home from './pages/Home'
-import router from './routes/routes'
+import router from './router/router'
 
 const App = () => {
   return (
