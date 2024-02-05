@@ -1,5 +1,12 @@
 import style from '../styles/Limits.module.css'
-export function Limits() {
+
+import data from '../db/limits.json'
+
+const Limits = () => {
+  const { limits } = data
+
+  console.log(limits)
+
   return (
     <div className={style.container}>
       <h1>Limites</h1>
@@ -7,3 +14,5 @@ export function Limits() {
     </div>
   )
 }
+
+export default Limits

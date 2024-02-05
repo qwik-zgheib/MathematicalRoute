@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 
-import { Limits } from '../components/Limits'
+import Limits from '../components/Limits'
 import { Derivadas } from '../components/Derivadas'
 import { Funciones } from '../components/Funciones'
 import { Integrales } from '../components/Integrales'
