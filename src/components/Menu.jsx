@@ -39,6 +39,7 @@ const Menu = () => {
     <div className="flex flex-row">
       <div className={styles.menu}>
         <div className="flex flex-col p-2">
+          <p className="text-2xl text-[#ad0909]">Temas</p>
           <ul className={`list-none pl-4`}>
             {routes.map(({ name, path, routes: subRoutes }) => (
               <li
