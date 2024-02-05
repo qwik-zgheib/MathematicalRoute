@@ -8,7 +8,9 @@ const Navbar = () => {
   return (
     <div>
       <div className={styles.container}>
-        <div>left</div>
+        <div>
+          <img className={styles.image} src="/src/assets/images/logoxaturn.png" />
+        </div>
         <div className="title">
           <Title />
         </div>
