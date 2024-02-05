@@ -1,0 +1,33 @@
+{
+  "routes": [
+    {
+      "name": "Funciones",
+      "path": "functions",
+      "routes": [{ "name": "Item 1", "path": "Subtema1" }]
+    },
+    {
+      "name": "Limites",
+      "path": "limits",
+      "routes": [
+        { "name": "Item 1", "path": "Subtema1" },
+        { "name": "Item 2", "path": "Subtema2" },
+        { "name": "Item 3", "path": "Subtema3" }
+      ]
+    },
+    {
+      "name": "Derivadas",
+      "path": "derivatives",
+      "routes": [
+        { "name": "Item 1", "path": "Subtema1" },
+        { "name": "Item 2", "path": "Subtema2" },
+        { "name": "Item 3", "path": "Subtema3" },
+        { "name": "Item 4", "path": "Subtema4" }
+      ]
+    },
+    {
+      "name": "Integrales",
+      "path": "integrals",
+      "routes": [{ "name": "Item 1", "path": "Subtema1" }]
+    }
+  ]
+}
