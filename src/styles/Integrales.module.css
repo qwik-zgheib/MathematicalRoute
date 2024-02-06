@@ -1,7 +1,8 @@
 .container {
   position: absolute;
   top: 9vh;
-  left: 22vh;
+  left: 26vh;
   height: 100vh;
   width: 88.4vw;
+  padding: 40px;
 }
