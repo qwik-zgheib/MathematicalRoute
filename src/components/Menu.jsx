@@ -11,11 +11,14 @@ const Menu = () => {
     <div className="flex flex-row">
       <div className={`${styles.menu} bg-[#d9c7a7] dark:bg-[#011826]`}>
         <div className="flex flex-col p-2">
-          <p className="text-2xl text-[#ad0909]">Temas</p>
+          <p className="text-2xl text-[#ad0909] dark:text-[#7d7bf0]">Temas</p>
           <ul className={`list-none pl-4`}>
             {Object.values(routes).map(({ name, path, routes: subRoutes }) => (
               <li className={`text-nowrap transition duration-300 ease-in-out`} key={name}>
-                <Link className="font-medium hover:font-semibold text-gray-700 hover:text-indigo-500" to={path}>
+                <Link
+                  className="font-medium hover:font-semibold text-[#a04332] hover:text-[#cf7a52] dark:text-[#9dacd6] dark:hover:text-indigo-500"
+                  to={path}
+                >
                   {name}
                 </Link>
 
