@@ -8,7 +8,7 @@ import ThemeSwitcher from './ThemeSwitcher'
 const Navbar = () => {
   return (
     <div>
-      <div className={`${styles.container} bg-gray-200 dark:bg-[#1b2c3e]`}>
+      <div className={`${styles.container} bg-[#011526] dark:bg-[#011526]`}>
         <div>
           <img className={styles.image} src="/src/assets/images/logoxaturn.png" />
         </div>

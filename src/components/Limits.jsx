@@ -8,7 +8,7 @@ const Limits = () => {
   console.log(limits)
 
   return (
-    <div className={style.container}>
+    <div className={`${style.container} bg-[#ece5d1] dark:bg-[#2D2E40] dark:text-[#fff]`}>
       <h1>Limites</h1>
       <h1>Other change </h1>
     </div>

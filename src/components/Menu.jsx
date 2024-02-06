@@ -9,7 +9,7 @@ const Menu = () => {
 
   return (
     <div className="flex flex-row">
-      <div className={styles.menu}>
+      <div className={`${styles.menu} bg-[#d9c7a7] dark:bg-[#011826]`}>
         <div className="flex flex-col p-2">
           <p className="text-2xl text-[#ad0909]">Temas</p>
           <ul className={`list-none pl-4`}>
