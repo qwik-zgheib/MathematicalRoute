@@ -13,11 +13,22 @@
   height: 100vh;
   position: relative;
   top: 9vh;
-  width: 22vh;
+  width: 26vh;
+  overflow: hidden;
 }
 
 .image {
   position: relative;
   max-width: 40px;
   margin: 10px 20px;
+}
+@media (max-width: 1366px) {
+  
+  .menu { 
+
+    li{font-size: .8rem ;
+       margin-left: -18px;
+    }
+    
+  }
 }
