@@ -2,39 +2,41 @@
   "limits": [
     {
       "id": 1,
-      "tema": "Límites Básicos",
-      "descripcion": "Conceptos fundamentales sobre límites.",
-      "subtemas": [
+      "topic": "Límites Básicos",
+      "name": "basiclimits",
+      "description": "Conceptos fundamentales sobre límites.",
+      "subtopic": [
         {
           "id": 1,
-          "nombre": "Límite en un punto",
+          "name": "Límite en un punto",
           "formula": "lim (x -> a) f(x) = L",
-          "propiedades": ["Si el límite existe, es único.", "El límite puede ser igual o no existir."]
+          "properties": ["Si el límite existe, es único.", "El límite puede ser igual o no existir."]
         },
         {
           "id": 2,
-          "nombre": "Límite infinito",
+          "name": "Límite infinito",
           "formula": "lim (x -> a) f(x) = ±∞",
-          "propiedades": ["El límite se acerca a infinito positivo o negativo."]
+          "properties": ["El límite se acerca a infinito positivo o negativo."]
         }
       ]
     },
     {
       "id": 2,
-      "tema": "Reglas de Límites",
-      "descripcion": "Reglas comunes para evaluar límites.",
-      "subtemas": [
+      "topic": "Reglas de Límites",
+      "name": "boundaryrules",
+      "description": "Reglas comunes para evaluar límites.",
+      "subtopic": [
         {
           "id": 1,
-          "nombre": "Límite de suma/resta",
+          "name": "Límite de suma/resta",
           "formula": "lim (x -> a) [f(x) ± g(x)] = lim (x -> a) f(x) ± lim (x -> a) g(x)",
-          "propiedades": ["Se pueden separar límites de funciones sumadas o restadas."]
+          "properties": ["Se pueden separar límites de funciones sumadas o restadas."]
         },
         {
           "id": 2,
-          "nombre": "Límite de producto",
+          "name": "Límite de producto",
           "formula": "lim (x -> a) [f(x) * g(x)] = lim (x -> a) f(x) * lim (x -> a) g(x)",
-          "propiedades": ["Se pueden separar límites de funciones multiplicadas."]
+          "properties": ["Se pueden separar límites de funciones multiplicadas."]
         }
       ]
     }

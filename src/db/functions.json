@@ -1,0 +1,82 @@
+{
+  "functions": [
+    {
+      "id": 1,
+      "topic": "Funciones Básicas",
+      "name": "basicfunctions",
+      "description": "Conceptos fundamentales sobre funciones.",
+      "subtopic": [
+        {
+          "id": 1,
+          "name": "Función Lineal",
+          "formula": "f(x) = mx + b",
+          "properties": ["La pendiente (m) define la inclinación de la función.", "La ordenada al origen (b) indica el punto de corte con el eje y."]
+        },
+        {
+          "id": 2,
+          "name": "Función Cuadrática",
+          "formula": "f(x) = ax^2 + bx + c",
+          "properties": ["El coeficiente a determina la concavidad de la parábola.", "Los puntos de intersección con el eje x se llaman raíces."]
+        },
+        {
+          "id": 3,
+          "name": "Función Exponencial",
+          "formula": "f(x) = a^x",
+          "properties": ["La base (a) es un número positivo diferente de 1.", "La función crece exponencialmente si a > 1 y decrece si 0 < a < 1."]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "topic": "Operaciones con Funciones",
+      "name": "functionoperations",
+      "description": "Reglas comunes para operar con funciones.",
+      "subtopic": [
+        {
+          "id": 1,
+          "name": "Suma de Funciones",
+          "formula": "(f + g)(x) = f(x) + g(x)",
+          "properties": ["Sumar funciones significa sumar sus valores para cada x."]
+        },
+        {
+          "id": 2,
+          "name": "Producto de Funciones",
+          "formula": "(f * g)(x) = f(x) * g(x)",
+          "properties": ["Multiplicar funciones significa multiplicar sus valores para cada x."]
+        },
+        {
+          "id": 3,
+          "name": "Composición de Funciones",
+          "formula": "(f ∘ g)(x) = f(g(x))",
+          "properties": ["La composición aplica primero la función g y luego la función f."]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "topic": "Funciones Trigonométricas",
+      "name": "trigonometricfunctions",
+      "description": "Funciones relacionadas con triángulos y ángulos.",
+      "subtopic": [
+        {
+          "id": 1,
+          "name": "Función Seno",
+          "formula": "f(x) = sin(x)",
+          "properties": ["El valor de la función oscila entre -1 y 1.", "El período de la función es 2π."]
+        },
+        {
+          "id": 2,
+          "name": "Función Coseno",
+          "formula": "f(x) = cos(x)",
+          "properties": ["El valor de la función oscila entre -1 y 1.", "El período de la función es 2π."]
+        },
+        {
+          "id": 3,
+          "name": "Función Tangente",
+          "formula": "f(x) = tan(x)",
+          "properties": ["La tangente es igual al seno dividido por el coseno.", "La función tiene asíntotas cada π/2 unidades."]
+        }
+      ]
+    }
+  ]
+}
