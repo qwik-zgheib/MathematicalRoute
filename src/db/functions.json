@@ -2,79 +2,203 @@
   "functions": [
     {
       "id": 1,
-      "topic": "Funciones Básicas",
-      "name": "basicfunctions",
-      "description": "Conceptos fundamentales sobre funciones.",
+      "topic": "Definición y Conceptos Básicos",
+      "name": "",
+      "description": "",
       "subtopic": [
         {
           "id": 1,
-          "name": "Función Lineal",
-          "formula": "f(x) = mx + b",
-          "properties": ["La pendiente (m) define la inclinación de la función.", "La ordenada al origen (b) indica el punto de corte con el eje y."]
+          "name": "Introducción a las funciones",
+          "formula": "",
+          "properties": []
         },
         {
           "id": 2,
-          "name": "Función Cuadrática",
-          "formula": "f(x) = ax^2 + bx + c",
-          "properties": ["El coeficiente a determina la concavidad de la parábola.", "Los puntos de intersección con el eje x se llaman raíces."]
+          "name": "Variables independientes y dependientes",
+          "formula": "",
+          "properties": []
         },
         {
           "id": 3,
-          "name": "Función Exponencial",
-          "formula": "f(x) = a^x",
-          "properties": ["La base (a) es un número positivo diferente de 1.", "La función crece exponencialmente si a > 1 y decrece si 0 < a < 1."]
+          "name": "Gráficos de funciones en el plano cartesiano",
+          "formula": "",
+          "properties": []
         }
       ]
     },
     {
       "id": 2,
-      "topic": "Operaciones con Funciones",
-      "name": "functionoperations",
-      "description": "Reglas comunes para operar con funciones.",
+      "topic": "Tipos de Funciones",
+      "name": "",
+      "description": "",
       "subtopic": [
         {
           "id": 1,
-          "name": "Suma de Funciones",
-          "formula": "(f + g)(x) = f(x) + g(x)",
-          "properties": ["Sumar funciones significa sumar sus valores para cada x."]
+          "name": "Funciones lineales",
+          "formula": "",
+          "properties": []
         },
         {
           "id": 2,
-          "name": "Producto de Funciones",
-          "formula": "(f * g)(x) = f(x) * g(x)",
-          "properties": ["Multiplicar funciones significa multiplicar sus valores para cada x."]
+          "name": "Funciones cuadráticas",
+          "formula": "",
+          "properties": []
         },
         {
           "id": 3,
-          "name": "Composición de Funciones",
-          "formula": "(f ∘ g)(x) = f(g(x))",
-          "properties": ["La composición aplica primero la función g y luego la función f."]
+          "name": "Funciones racionales",
+          "formula": "",
+          "properties": []
+        },
+        {
+          "id": 4,
+          "name": "Funciones exponenciales",
+          "formula": "",
+          "properties": []
+        },
+        {
+          "id": 5,
+          "name": "Funciones logarítmicas",
+          "formula": "",
+          "properties": []
         }
       ]
     },
     {
       "id": 3,
-      "topic": "Funciones Trigonométricas",
-      "name": "trigonometricfunctions",
-      "description": "Funciones relacionadas con triángulos y ángulos.",
+      "topic": "Operaciones con Funciones",
+      "name": "",
+      "description": "",
       "subtopic": [
         {
           "id": 1,
-          "name": "Función Seno",
-          "formula": "f(x) = sin(x)",
-          "properties": ["El valor de la función oscila entre -1 y 1.", "El período de la función es 2π."]
+          "name": "Suma, resta, multiplicación y división de funciones",
+          "formula": "",
+          "properties": []
         },
         {
           "id": 2,
-          "name": "Función Coseno",
-          "formula": "f(x) = cos(x)",
-          "properties": ["El valor de la función oscila entre -1 y 1.", "El período de la función es 2π."]
+          "name": "Composición de funciones",
+          "formula": "",
+          "properties": []
         },
         {
           "id": 3,
-          "name": "Función Tangente",
-          "formula": "f(x) = tan(x)",
-          "properties": ["La tangente es igual al seno dividido por el coseno.", "La función tiene asíntotas cada π/2 unidades."]
+          "name": "Funciones inversas",
+          "formula": "",
+          "properties": []
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "topic": "Propiedades de las Funciones",
+      "name": "",
+      "description": "",
+      "subtopic": [
+        {
+          "id": 1,
+          "name": "Dominio y rango de funciones",
+          "formula": "",
+          "properties": []
+        },
+        {
+          "id": 2,
+          "name": "Continuidad y discontinuidad",
+          "formula": "",
+          "properties": []
+        },
+        {
+          "id": 3,
+          "name": "Simetría en funciones",
+          "formula": "",
+          "properties": []
+        },
+        {
+          "id": 4,
+          "name": "Paridad en funciones",
+          "formula": "",
+          "properties": []
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "topic": "Transformaciones de Funciones",
+      "name": "",
+      "description": "",
+      "subtopic": [
+        {
+          "id": 1,
+          "name": "Desplazamientos horizontales y verticales",
+          "formula": "",
+          "properties": []
+        },
+        {
+          "id": 2,
+          "name": "Reflexiones y escalas",
+          "formula": "",
+          "properties": []
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "topic": "Resolución de Ecuaciones e Inecuaciones con Funciones",
+      "name": "",
+      "description": "",
+      "subtopic": [
+        {
+          "id": 1,
+          "name": "Encontrar raíces y soluciones",
+          "formula": "",
+          "properties": []
+        },
+        {
+          "id": 2,
+          "name": "Resolver sistemas de ecuaciones",
+          "formula": "",
+          "properties": []
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "topic": "Aplicaciones Prácticas de Funciones en la Vida Real",
+      "name": "",
+      "description": "",
+      "subtopic": [
+        {
+          "id": 1,
+          "name": "Modelado de fenómenos con funciones",
+          "formula": "",
+          "properties": []
+        },
+        {
+          "id": 2,
+          "name": "Problemas de optimización",
+          "formula": "",
+          "properties": []
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "topic": "Teorema del Valor Intermedio y Teorema de Bolzano-Weierstrass",
+      "name": "",
+      "description": "",
+      "subtopic": [
+        {
+          "id": 1,
+          "name": "Conceptos fundamentales",
+          "formula": "",
+          "properties": []
+        },
+        {
+          "id": 2,
+          "name": "Aplicaciones en el análisis de funciones",
+          "formula": "",
+          "properties": []
         }
       ]
     }
