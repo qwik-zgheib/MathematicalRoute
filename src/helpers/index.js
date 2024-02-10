@@ -1,9 +1,13 @@
 import dataFunctions from '../db/functions.json'
 import dataLimits from '../db/limits.json'
+import dataDerivatives from '../db/derivatives.json'
+import dataIntegrals from '../db/integrals.json'
 
 const database = {
   functions: { name: 'Funciones', data: dataFunctions },
   limits: { name: 'Límites', data: dataLimits },
+  derivatives: { name: 'Derivadas', data: dataDerivatives },
+  integrals: { name: 'Integrales', data: dataIntegrals },
 }
 
 export const createRoutes = () => {

@@ -1,10 +1,12 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
-import styles from '../styles/Navbar.module.css'
+import { Link, Outlet } from 'react-router-dom'
+
 import Title from '../components/Title'
-import { SearchInput } from './SearchInput'
 import ThemeSwitcher from './ThemeSwitcher'
-import { Link } from 'react-router-dom'
+import { SearchInput } from './SearchInput'
+
+import styles from '../styles/Navbar.module.css'
+
 const Navbar = () => {
   return (
     <div>

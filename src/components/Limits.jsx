@@ -1,6 +1,6 @@
-import style from '../styles/Limits.module.css'
-
 import data from '../db/limits.json'
+
+import style from '../styles/Limits.module.css'
 
 const Limits = () => {
   const { limits } = data
