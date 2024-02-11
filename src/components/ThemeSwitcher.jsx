@@ -10,7 +10,7 @@ const ThemeSwitcher = () => {
 
   return (
     <div className="flex items-center space-x-4 pr-3">
-      <button className="text-gray-800 dark:text-gray-300 px-4 py-2 rounded" onClick={toggleTheme}>
+      <button className="text-gray-300 dark:text-gray-300 px-4 py-2 rounded" onClick={toggleTheme}>
         <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} className="ml-2" />
       </button>
     </div>
