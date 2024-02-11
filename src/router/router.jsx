@@ -1,11 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom'
 
+import Functions from '../components/Functions'
 import Limits from '../components/Limits'
-import { Derivadas } from '../components/Derivadas'
-import { Funciones } from '../components/Funciones'
-import { Integrales } from '../components/Integrales'
-import Navbar from '../components/Navbar'
 import Menu from '../components/Menu'
+import Navbar from '../components/Navbar'
+
+import { Derivadas } from '../components/Derivadas'
+import { Integrales } from '../components/Integrales'
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
         children: [
           {
             path: 'functions',
-            element: <Funciones />,
+            element: <Functions />,
           },
           {
             path: 'limits',
