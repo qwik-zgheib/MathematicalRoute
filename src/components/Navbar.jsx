@@ -1,52 +1,27 @@
-import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import Title from '../components/Title'
 import ThemeSwitcher from './ThemeSwitcher'
-import { SearchInput } from './SearchInput'
+import SearchInput from './SearchInput'
 
+import logo from '../assets/images/logoxaturn.png'
 import styles from '../styles/Navbar.module.css'
 
 const Navbar = () => {
   return (
-    <div>
-      <div className={`${styles.container} bg-[#011526] dark:bg-[#011526]`}>
-        <div className={styles.config}>
-          <div>
-            <img className={styles.image} src="/src/assets/images/logoxaturn.png" />
-          </div>
-
-          <div className="title">
-            <Title />
-          </div>
-
-          <div>
-            <SearchInput />
-            <ThemeSwitcher />
-          </div>
-        </div>
-        <div className={styles.navegar}>
-          <ul className={styles.lista}>
-            <Link to="/functions">
-              <li className={styles.subl}>Funciones</li>
-            </Link>
-
-            <Link to="/limits">
-              <li className={styles.subl}>Limites</li>
-            </Link>
-
-            <Link to="/derivatives">
-              <li className={styles.subl}>Derivadas</li>
-            </Link>
-
-            <Link to="/integrals">
-              <li className={styles.subl}>Integrales</li>
-            </Link>
-          </ul>
-        </div>
+    <div className={`${styles.navbar}`}>
+      <Link to="/">
+        <img src={logo} alt="Logo" className={`${styles.navbar_logo}`} />
+      </Link>
+      <div className={`${styles.navbar_title} hidden sm:flex`}>
+        <Title />
       </div>
-
-      <Outlet />
+      <div className={`${styles.navbar_actions}`}>
+        <div className="hidden sm:hidden md:block">
+          <SearchInput />
+        </div>
+        <ThemeSwitcher />
+      </div>
     </div>
   )
 }

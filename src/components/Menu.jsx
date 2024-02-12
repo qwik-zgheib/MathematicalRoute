@@ -1,44 +1,43 @@
-import { Link, Outlet } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
-import { createRoutes } from '../helpers'
+import { Link } from 'react-router-dom'
 
-import styles from '../styles/Navbar.module.css'
-
-const Menu = () => {
-  const routes = createRoutes()
-
+const Menu = ({ routes }) => {
   return (
-    <div className="flex flex-row">
-      <div className={`${styles.menu} bg-[#d9c7a7] dark:bg-[#011826]`}>
-        <div className="flex flex-col p-2">
-          <p className="text-2xl text-[#ad0909] dark:text-[#7d7bf0]">Temas</p>
-          <ul className={`list-none pl-4`}>
-            {Object.values(routes).map(({ name, path, routes: subRoutes }) => (
-              <li className={`text-nowrap transition duration-300 ease-in-out`} key={name}>
-                <Link
-                  className="font-medium hover:font-semibold text-[#a04332] hover:text-[#cf7a52] dark:text-[#9dacd6] dark:hover:text-indigo-500"
-                  to={path}
-                >
-                  {name}
-                </Link>
+    <div className="p-2 overflow-y-auto">
+      <ul className="space-y-3">
+        {Object.values(routes).map(({ name, path, routes: subRoutes }) => (
+          <li key={name}>
+            <Link
+              to={path}
+              className="block py-1 px-4 rounded-md font-bold text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors duration-200"
+            >
+              {name}
+            </Link>
 
-                {subRoutes && (
-                  <ul className={`list-none pl-4 mt-1`}>
-                    {subRoutes.map(({ name: subName, path: subPath }) => (
-                      <li className={`text-nowrap text-sm text-gray-500 hover:text-indigo-500 transition duration-300 ease-in-out`} key={subName}>
-                        <Link to={`${path}/${subPath}`}>{subName}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <Outlet />
+            {subRoutes && (
+              <ul className="ml-4 space-y-1">
+                {subRoutes.map(({ name: subName, path: subPath }) => (
+                  <li key={subName}>
+                    <Link
+                      to={`${path}/${subPath}`}
+                      className="block px-4 rounded-md font-medium text-gray-500 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 text-nowrap transition-colors duration-200"
+                    >
+                      {subName}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
     </div>
   )
+}
+
+Menu.propTypes = {
+  routes: PropTypes.object.isRequired,
 }
 
 export default Menu
