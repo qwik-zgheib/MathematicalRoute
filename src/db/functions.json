@@ -10,8 +10,14 @@
           "id": 1,
           "subtopic": "",
           "name": "",
-          "description": "",
-          "notation": ["Para cada x en A, hay exactamente un y en B tal que f(x)=y"]
+          "characteristic": "",
+          "notation": [
+            {
+              "id": 1,
+              "name": "",
+              "details": ["Para cada x en A, hay exactamente un y en B tal que f(x)=y"]
+            }
+          ]
         }
       ]
     },
@@ -25,15 +31,27 @@
           "id": 1,
           "subtopic": "Dominio",
           "name": "",
-          "description": "El dominio de una función es el conjunto de todos los valores de entrada (o de la variable independiente) para los cuales la función está definida. En otras palabras, son los valores que puedes 'sustituir' en la función para obtener un resultado significativo. Al describir el dominio, es importante considerar cualquier restricción o condición que pueda afectar la validez de la función.",
-          "notation": ["El dominio se denota comúnmente como D(f) o simplemente Dom(f)."]
+          "characteristic": "El dominio de una función es el conjunto de todos los valores de entrada (o de la variable independiente) para los cuales la función está definida. En otras palabras, son los valores que puedes 'sustituir' en la función para obtener un resultado significativo. Al describir el dominio, es importante considerar cualquier restricción o condición que pueda afectar la validez de la función.",
+          "notation": [
+            {
+              "id": 1,
+              "name": "",
+              "details": ["El dominio se denota comúnmente como D(f) o simplemente Dom(f)."]
+            }
+          ]
         },
         {
           "id": 2,
           "subtopic": "Rango",
           "name": "",
-          "description": "El rango (también llamado imagen) de una función es el conjunto de todos los valores de salida (o de la variable dependiente) que la función puede tomar. Es el conjunto de todos los posibles resultados que la función puede producir para los valores del dominio.",
-          "notation": ["El rango se denota comúnmente como R(f) o simplemente Ran(f)."]
+          "characteristic": "El rango (también llamado imagen) de una función es el conjunto de todos los valores de salida (o de la variable dependiente) que la función puede tomar. Es el conjunto de todos los posibles resultados que la función puede producir para los valores del dominio.",
+          "notation": [
+            {
+              "id": 1,
+              "name": "",
+              "details": ["El rango se denota comúnmente como R(f) o simplemente Ran(f)."]
+            }
+          ]
         }
       ]
     },
@@ -47,12 +65,11 @@
           "id": 1,
           "subtopic": "Función Constante",
           "name": "",
-          "description": "Una función constante es un tipo de función en la cual el valor de la variable dependiente es el mismo para todos los valores de la variable independiente. En otras palabras, la función asigna un único valor constante sin depender del valor de la variable independiente.",
+          "characteristic": "Una función constante es un tipo de función en la cual el valor de la variable dependiente es el mismo para todos los valores de la variable independiente. En otras palabras, la función asigna un único valor constante sin depender del valor de la variable independiente.",
           "notation": [
             {
               "id": 1,
               "name": "f(x) = c",
-              "characteristic": "",
               "details": ["f(x) es la notación de la función.", "x es la variable independiente", "c es una constante, es decir, un número fijo"]
             }
           ]
@@ -61,12 +78,11 @@
           "id": 2,
           "subtopic": "Función Lineal",
           "name": "",
-          "description": "La definición matemática de una función lineal indica que la relación entre la variable dependiente (f(x)) y la variable independiente (x) es lineal, es decir, la función produce una línea recta cuando se representa gráficamente en un sistema de coordenadas cartesianas.",
+          "characteristic": "La definición matemática de una función lineal indica que la relación entre la variable dependiente (f(x)) y la variable independiente (x) es lineal, es decir, la función produce una línea recta cuando se representa gráficamente en un sistema de coordenadas cartesianas.",
           "notation": [
             {
               "id": 1,
               "name": "f(x) = mx + b",
-              "characteristic": "",
               "details": [
                 "f(x) es la notación de la función.",
                 "x es la variable independiente.",
@@ -80,12 +96,11 @@
           "id": 3,
           "subtopic": "Función Cuadratica",
           "name": "",
-          "description": "La definición matemática de una función cuadrática establece que el grado más alto de la variable independiente (x) es 2, lo que significa que la función es cuadrática.",
+          "characteristic": "La definición matemática de una función cuadrática establece que el grado más alto de la variable independiente (x) es 2, lo que significa que la función es cuadrática.",
           "notation": [
             {
               "id": 1,
               "name": "f(x)=ax2+bx+c",
-              "characteristic": "",
               "details": ["f(x) es la notación de la función.", "x es la variable independiente.", "a, b, y c son coeficientes constantes, con a≠0."]
             }
           ]
@@ -94,12 +109,11 @@
           "id": 4,
           "subtopic": "Función Polinómica",
           "name": "",
-          "description": "El grado del polinomio es el valor más alto de n para el cual a_n!=0.",
+          "characteristic": "El grado del polinomio es el valor más alto de n para el cual a_n!=0.",
           "notation": [
             {
               "id": 1,
               "name": "f(x) = anxn + an-1xn-1 +... + a2x2 + a1x + a0",
-              "characteristic": "",
               "details": [
                 "f(x) es la notación de la función.",
                 "x es la variable independiente.",
@@ -113,12 +127,11 @@
           "id": 5,
           "subtopic": "Función Racional",
           "name": "",
-          "description": "Una función racional es una función matemática que se puede expresar como el cociente de dos polinomios.",
+          "characteristic": "Una función racional es una función matemática que se puede expresar como el cociente de dos polinomios.",
           "notation": [
             {
               "id": 1,
               "name": "f(x)=\frac{p(x)}{q(x)}",
-              "characteristic": "",
               "details": ["f(x) es la notación de la función.", "P(x) y Q(x), son polinomios con Q(x) != 0 para que la función este definida."]
             }
           ]
@@ -127,12 +140,11 @@
           "id": 6,
           "subtopic": "Función Exponencial",
           "name": "",
-          "description": "Una función exponencial es una función matemática que tiene la forma:",
+          "characteristic": "Una función exponencial es una función matemática que tiene la forma:",
           "notation": [
             {
               "id": 1,
               "name": "f(x) = abx",
-              "characteristic": "",
               "details": [
                 "f(x) es la notación de la función.",
                 "x es la variable independiente.",
@@ -146,12 +158,11 @@
           "id": 7,
           "subtopic": "Función Logarítmica",
           "name": "",
-          "description": "Una función logarítmica es una función matemática que se expresa en términos de logaritmos.",
+          "characteristic": "Una función logarítmica es una función matemática que se expresa en términos de logaritmos.",
           "notation": [
             {
               "id": 1,
               "name": "f(x) = logb a",
-              "characteristic": "",
               "details": ["f(x) es la notación de la función.", "x es la variable independiente.", "b es la del logaritmo."]
             }
           ]
@@ -160,21 +171,21 @@
           "id": 8,
           "subtopic": "Función Trigonométrica",
           "name": "",
-          "description": "",
-          "notation": [{ "id": 1, "name": "", "characteristic": "", "details": [] }]
+          "characteristic": "",
+          "notation": [{ "id": 1, "name": "", "details": [] }]
         },
         {
           "id": 9,
           "subtopic": "Función Hiperbólica",
           "name": "",
-          "description": "",
-          "notation": [{ "id": 1, "name": "", "characteristic": "", "details": [] }]
+          "characteristic": "",
+          "notation": [{ "id": 1, "name": "", "details": [] }]
         },
         {
           "id": 10,
           "subtopic": "Función Valor Absoluto",
           "name": "",
-          "description": "La función valor absoluto se define como la distancia de un número real al cero en la recta numérica, sin tener en cuenta la dirección. La función valor absoluto se denota por |x| y se define de la siguiente manera",
+          "characteristic": "La función valor absoluto se define como la distancia de un número real al cero en la recta numérica, sin tener en cuenta la dirección. La función valor absoluto se denota por |x| y se define de la siguiente manera",
           "notation": [
             {
               "id": 1,
@@ -195,29 +206,29 @@
           "id": 1,
           "subtopic": "Suma de funciones",
           "name": "",
-          "description": "",
-          "notation": [{ "id": 1, "name": "(f + g)(x) = f(x) + g(x)", "characteristic": "", "details": [] }]
+          "characteristic": "",
+          "notation": [{ "id": 1, "name": "(f + g)(x) = f(x) + g(x)", "details": [] }]
         },
         {
           "id": 2,
           "subtopic": "Diferencia de funciones",
           "name": "",
-          "description": "",
-          "notation": [{ "id": 1, "name": "(f - g)(x) = f(x) - g(x)", "characteristic": "", "details": [] }]
+          "characteristic": "",
+          "notation": [{ "id": 1, "name": "(f - g)(x) = f(x) - g(x)", "details": [] }]
         },
         {
           "id": 3,
           "subtopic": "Producto de funciones",
           "name": "",
-          "description": "",
-          "notation": [{ "id": 1, "name": "(f.g)(x) = f(x),g(x)", "characteristic": "", "details": [] }]
+          "characteristic": "",
+          "notation": [{ "id": 1, "name": "(f.g)(x) = f(x),g(x)", "details": [] }]
         },
         {
           "id": 4,
           "subtopic": "División  de funciones",
           "name": "",
-          "description": "",
-          "notation": [{ "id": 1, "name": "(f/g)(x) = f(x)/g(x), g(x) != 0", "characteristic": "", "details": [] }]
+          "characteristic": "",
+          "notation": [{ "id": 1, "name": "(f/g)(x) = f(x)/g(x), g(x) != 0", "details": [] }]
         }
       ]
     },
@@ -231,12 +242,11 @@
           "id": 1,
           "subtopic": "",
           "name": "",
-          "description": "",
+          "characteristic": "",
           "notation": [
             {
               "id": 1,
               "name": "(f o g)(x)=(f(g(x)))",
-              "characteristic": "",
               "details": ["Primero aplicamos la función g a x, y luego tomamos el resultado y lo introducimos como entrada en la función f."]
             }
           ]
@@ -245,8 +255,14 @@
           "id": 2,
           "subtopic": "Propiedades",
           "name": "",
-          "description": "",
-          "notation": []
+          "characteristic": "",
+          "notation": [
+            {
+              "id": 1,
+              "name": "",
+              "details": []
+            }
+          ]
         }
       ]
     },
@@ -260,22 +276,22 @@
           "id": 1,
           "subtopic": "Función Inyectiva",
           "name": "",
-          "description": "",
-          "notation": [{ "id": 1, "name": "", "characteristic": "", "details": [] }]
+          "characteristic": "",
+          "notation": [{ "id": 1, "name": "", "details": [] }]
         },
         {
           "id": 2,
           "subtopic": "Función Sobreyectiva",
           "name": "",
-          "description": "",
-          "notation": [{ "id": 1, "name": "", "characteristic": "", "details": [] }]
+          "characteristic": "",
+          "notation": [{ "id": 1, "name": "", "details": [] }]
         },
         {
           "id": 3,
           "subtopic": "Función Biyectiva",
           "name": "",
-          "description": "",
-          "notation": [{ "id": 1, "name": "", "characteristic": "", "details": [] }]
+          "characteristic": "",
+          "notation": [{ "id": 1, "name": "", "details": [] }]
         }
       ]
     },
@@ -289,22 +305,22 @@
           "id": 1,
           "subtopic": "Función Crecientes",
           "name": "",
-          "description": "",
-          "notation": [{ "id": 1, "name": "", "characteristic": "", "details": [] }]
+          "characteristic": "",
+          "notation": [{ "id": 1, "name": "", "details": [] }]
         },
         {
           "id": 2,
           "subtopic": "Función Decrecientes",
           "name": "",
-          "description": "",
-          "notation": [{ "id": 1, "name": "", "characteristic": "", "details": [] }]
+          "characteristic": "",
+          "notation": [{ "id": 1, "name": "", "details": [] }]
         },
         {
           "id": 3,
           "subtopic": "Función Monotomas",
           "name": "",
-          "description": "",
-          "notation": [{ "id": 1, "name": "", "characteristic": "", "details": [] }]
+          "characteristic": "",
+          "notation": [{ "id": 1, "name": "", "details": [] }]
         }
       ]
     },
@@ -318,15 +334,15 @@
           "id": 1,
           "subtopic": "",
           "name": "",
-          "description": "",
-          "notation": [{ "id": 1, "name": "", "characteristic": "", "details": [] }]
+          "characteristic": "",
+          "notation": [{ "id": 1, "name": "", "details": [] }]
         },
         {
           "id": 2,
           "subtopic": "Función Inversa de una Composición",
           "name": "",
-          "description": "",
-          "notation": [{ "id": 1, "name": "", "characteristic": "", "details": [] }]
+          "characteristic": "",
+          "notation": [{ "id": 1, "name": "", "details": [] }]
         }
       ]
     }
