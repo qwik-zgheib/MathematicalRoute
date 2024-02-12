@@ -5,7 +5,15 @@
       "topic": "Definición",
       "name": "",
       "description": "Una función es una relación matemática entre dos conjuntos, llamados dominio y codominio, que asigna a cada elemento del dominio exactamente un elemento del codominio. En términos más sencillos, una función establece una correspondencia entre los elementos de dos conjuntos de manera que a cada elemento del primer conjunto le corresponde uno y solo uno del segundo conjunto.",
-      "subtopic": ["Para cada x en A, hay exactamente un y en B tal que f(x)=y"]
+      "subtopic": [
+        {
+          "id": 1,
+          "subtopic": "",
+          "name": "",
+          "description": "",
+          "notation": ["Para cada x en A, hay exactamente un y en B tal que f(x)=y"]
+        }
+      ]
     },
     {
       "id": 2,
