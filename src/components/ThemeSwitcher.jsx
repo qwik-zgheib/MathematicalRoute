@@ -9,11 +9,12 @@ const ThemeSwitcher = () => {
   const [theme, toggleTheme] = useDarkSide()
 
   return (
-    <div className="flex items-center space-x-4 pr-3">
-      <button className="text-gray-800 dark:text-gray-300 px-4 py-2 rounded" onClick={toggleTheme}>
-        <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} className="ml-2" />
-      </button>
-    </div>
+    <button
+      className="text-[#4c4e58] hover:text-[#5a03d5] dark:text-[#b8b9c1] hover:dark:text-[#bea6ff] border-none p-2 justify-center hover:scale-150 hover:animate-spin"
+      onClick={toggleTheme}
+    >
+      <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} className="text-xl" />
+    </button>
   )
 }
 
