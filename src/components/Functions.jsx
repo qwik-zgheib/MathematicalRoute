@@ -2,34 +2,43 @@ import dataFunctions from '../db/functions.json'
 
 // eslint-disable-next-line react/prop-types
 const Text = ({ id, content, color, fonts }) => {
-  const { text, border, num } = color || { text: '', border: '', num: '' }
-  const { textSize, weight, numSize } = fonts || { textSize: '', weight: '', numSize: '' }
+  const { text, num } = color || { text: '', num: '' }
+  const { textSize, weight, numSize, height } = fonts || { textSize: '', weight: '', height: '', numSize: '' }
   if (!content || content === '') {
     return null
   }
   return (
-    <div className={`flex items-center h-16 border-l-4 ${border} ${weight}`}>
-      {id ? <span className={`text-4xl ${num} ${numSize} px-2`}>{id}.</span> : null}
+    <div className={`flex items-center ${height} ${weight}`}>
+      {id ? <span className={`${num} ${numSize} px-2`}>{id}.</span> : null}
       <span className={`pl-4 ${text} ${textSize}`}>{content}</span>
+    </div>
+  )
+}
+
+// eslint-disable-next-line react/prop-types
+const Notation = ({ notation }) => {
+  return (
+    <div className="flex items-center py-2">
+      <span className="text-[#f83c86]">{notation}</span>
     </div>
   )
 }
 
 const Functions = () => {
   const colors = {
-    topic: { text: 'text-lotus-800', border: 'border-lotus-700', num: 'text-lotus-900' },
-    subtopic: { text: 'text-lotus-800', border: 'border-gray-400' },
-    text: { text: 'text-waikawa-gray-900', border: 'border-blue-chill-700' },
-    property: { text: '', border: '' },
-    example: { text: '', border: '' },
-    exercise: { text: '', border: '' },
-    resolution: { text: '', border: '' },
+    topic: { text: 'text-lotus-800', num: 'text-lotus-900' },
+    subtopic: { text: 'text-lotus-800' },
+    text: { text: 'text-waikawa-gray-900' },
+    property: { text: '' },
+    example: { text: '' },
+    exercise: { text: '' },
+    resolution: { text: '' },
   }
 
   const fonts = {
-    topic: { textSize: 'text-3xl', weight: 'font-bold', numSize: 'text-4xl' },
-    subtopic: { textSize: 'text-lg', weight: 'font-bold' },
-    text: { textSize: 'text-base', weight: 'font-normal' },
+    topic: { textSize: 'text-2xl', weight: 'font-bold', height: 'h-14', numSize: 'text-3xl' },
+    subtopic: { textSize: 'text-xl', weight: 'font-semibold', height: 'h-12' },
+    text: { textSize: 'text-base', weight: 'font-normal', height: 'h-auto' },
     property: { textSize: '', weight: '' },
     example: { textSize: '', weight: '' },
     exercise: { textSize: '', weight: '' },
@@ -37,7 +46,7 @@ const Functions = () => {
   }
 
   return (
-    <div className="pr-3 mr-10">
+    <div className="pr-3">
       <h1 className="text-3xl text-waikawa-gray-950 font-bold px-5">Funciones</h1>
       {dataFunctions.functions.map(({ id, topic, description, subtopic }, funcIndex) => (
         <div key={id} className="pt-4">
@@ -49,14 +58,14 @@ const Functions = () => {
             <div key={subtopicIndex} className="flex flex-col">
               <Text content={subtopic} color={colors.subtopic} fonts={fonts.subtopic} />
 
+              <Notation notation={'xddd'} />
+
               {notation.map(({ name, details }, notationIndex) => (
-                <div key={notationIndex} className="flex flex-col h-auto border-l-4 border-gray-400">
-                  <span className="text-lg text-lotus-800 px-2">{name}</span>
+                <div key={notationIndex} className="flex flex-col pt-2">
+                  <Text content={name} color={colors.text} fonts={{ ...fonts.text, textSize: 'text-xl' }} />
                   <div className="flex flex-col">
                     {details.map((detail, detailIndex) => (
-                      <div key={detailIndex} className="flex">
-                        {detail}
-                      </div>
+                      <Text key={detailIndex} content={detail} color={colors.text} fonts={fonts.text} />
                     ))}
                   </div>
                 </div>
