@@ -1,12 +1,16 @@
+import PropTypes from 'prop-types'
+
 import dataFunctions from '../db/functions.json'
 
-// eslint-disable-next-line react/prop-types
+import { faCircle } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 const Text = ({ id, content, color, fonts }) => {
-  const { text, num } = color || { text: '', num: '' }
-  const { textSize, weight, numSize, height } = fonts || { textSize: '', weight: '', height: '', numSize: '' }
-  if (!content || content === '') {
-    return null
-  }
+  const { text, num } = color
+  const { textSize, weight, numSize, height } = fonts
+
+  if (!content || content === '') return null
+
   return (
     <div className={`flex items-center ${height} ${weight}`}>
       {id ? <span className={`${num} ${numSize} px-2`}>{id}.</span> : null}
@@ -15,12 +19,28 @@ const Text = ({ id, content, color, fonts }) => {
   )
 }
 
-// eslint-disable-next-line react/prop-types
 const Notation = ({ notation }) => {
+  const count = notation?.length !== 1 ? true : false
+
+  if (notation.filter((item) => item.name !== '').length === 0) return null
+
   return (
-    <div className="flex items-center py-2">
-      <span className="text-[#f83c86]">{notation}</span>
-    </div>
+    <>
+      {notation
+        .filter((item) => item.name !== '')
+        .map(({ id, name, details }, index) => (
+          <div className="flex flex-col items-start px-2 my-2 ml-3 border-l-4 border-lotus-800" key={index}>
+            <span className="text-[#f83c86] py-2 font-bold text-lg">{count ? id : null} Notación:</span>
+            <span className="ml-2 px-4 py-2 font-medium text-xl bg-slate-300">{name}</span>
+            {details.map((item, index) => (
+              <div className="px-2 flex gap-2 items-center justify-center" key={index}>
+                <FontAwesomeIcon icon={faCircle} className="text-sm w-2 h-2" />
+                <span className="">{item}</span>
+              </div>
+            ))}
+          </div>
+        ))}
+    </>
   )
 }
 
@@ -39,7 +59,7 @@ const Functions = () => {
     topic: { textSize: 'text-2xl', weight: 'font-bold', height: 'h-14', numSize: 'text-3xl' },
     subtopic: { textSize: 'text-xl', weight: 'font-semibold', height: 'h-12' },
     text: { textSize: 'text-base', weight: 'font-normal', height: 'h-auto' },
-    property: { textSize: '', weight: '' },
+    property: { textSize: 'text-base  ', weight: '' },
     example: { textSize: '', weight: '' },
     exercise: { textSize: '', weight: '' },
     resolution: { textSize: '', weight: '' },
@@ -58,24 +78,38 @@ const Functions = () => {
             <div key={subtopicIndex} className="flex flex-col">
               <Text content={subtopic} color={colors.subtopic} fonts={fonts.subtopic} />
 
-              <Notation notation={'xddd'} />
-
-              {notation.map(({ name, details }, notationIndex) => (
-                <div key={notationIndex} className="flex flex-col pt-2">
-                  <Text content={name} color={colors.text} fonts={{ ...fonts.text, textSize: 'text-xl' }} />
-                  <div className="flex flex-col">
-                    {details.map((detail, detailIndex) => (
-                      <Text key={detailIndex} content={detail} color={colors.text} fonts={fonts.text} />
-                    ))}
-                  </div>
-                </div>
-              ))}
+              <Notation notation={notation} />
             </div>
           ))}
         </div>
       ))}
     </div>
   )
+}
+
+Text.propTypes = {
+  id: PropTypes.number,
+  content: PropTypes.string.isRequired,
+  color: PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    num: PropTypes.string,
+  }),
+  fonts: PropTypes.shape({
+    textSize: PropTypes.string.isRequired,
+    weight: PropTypes.string.isRequired,
+    numSize: PropTypes.string,
+    height: PropTypes.string.isRequired,
+  }),
+}
+
+Notation.propTypes = {
+  notation: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string,
+      details: PropTypes.arrayOf(PropTypes.string).isRequired,
+    }),
+  ).isRequired,
 }
 
 export default Functions
