@@ -35,7 +35,7 @@
           "notation": [
             {
               "id": 1,
-              "name": "",
+              "name": "D(f)",
               "details": ["El dominio se denota comúnmente como D(f) o simplemente Dom(f)."]
             }
           ]
@@ -48,7 +48,7 @@
           "notation": [
             {
               "id": 1,
-              "name": "",
+              "name": "R(f)",
               "details": ["El rango se denota comúnmente como R(f) o simplemente Ran(f)."]
             }
           ]

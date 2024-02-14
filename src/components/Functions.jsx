@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types'
 
 import dataFunctions from '../db/functions.json'
+import styleFunctions from '../utils/functions.json'
 
-import { faCircle } from '@fortawesome/free-solid-svg-icons'
+import { faCircle, faCircleChevronDown, faCircleChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useState } from 'react'
 
 const Text = ({ id, content, color, fonts }) => {
   const { text, num } = color
@@ -32,6 +34,7 @@ const Notation = ({ notation }) => {
           <div className="flex flex-col items-start px-2 my-2 ml-3 border-l-4 border-lotus-800" key={index}>
             <span className="text-[#f83c86] py-2 font-bold text-lg">{count ? id : null} Notación:</span>
             <span className="ml-2 px-4 py-2 font-medium text-xl bg-slate-300">{name}</span>
+            <FontAwesomeIcon icon={faCircleChevronDown} className="text-sm w-2 h-2 bg-green-500" />
             {details.map((item, index) => (
               <div className="px-2 flex gap-2 items-center justify-center" key={index}>
                 <FontAwesomeIcon icon={faCircle} className="text-sm w-2 h-2" />
@@ -44,26 +47,110 @@ const Notation = ({ notation }) => {
   )
 }
 
-const Functions = () => {
-  const colors = {
-    topic: { text: 'text-lotus-800', num: 'text-lotus-900' },
-    subtopic: { text: 'text-lotus-800' },
-    text: { text: 'text-waikawa-gray-900' },
-    property: { text: '' },
-    example: { text: '' },
-    exercise: { text: '' },
-    resolution: { text: '' },
+const example = [
+  {
+    id: 1,
+    name: 'Rango',
+    answer: 'Calcular el rango de la función',
+    visible: true,
+    image: '',
+    resolution: ['a', 'b', 'c'],
+    res: '',
+  },
+  {
+    id: 2,
+    name: 'Dominio',
+    answer: 'Calcular el dominio de la función',
+    visible: false,
+    image: '',
+    resolution: ['x', 'y', 'z'],
+    res: '',
+  },
+]
+const Example = ({ example }) => {
+  const [examples, setExamples] = useState(example.filter((item) => item.name !== ''))
+
+  const buttons = {
+    active: {
+      icon: faCircleChevronUp,
+      text: 'Ocultar resolución',
+      style: 'text-red-500',
+    },
+    inactive: {
+      icon: faCircleChevronDown,
+      text: 'Mostrar resolución',
+      style: 'text-green-500',
+    },
   }
 
-  const fonts = {
-    topic: { textSize: 'text-2xl', weight: 'font-bold', height: 'h-14', numSize: 'text-3xl' },
-    subtopic: { textSize: 'text-xl', weight: 'font-semibold', height: 'h-12' },
-    text: { textSize: 'text-base', weight: 'font-normal', height: 'h-auto' },
-    property: { textSize: 'text-base  ', weight: '' },
-    example: { textSize: '', weight: '' },
-    exercise: { textSize: '', weight: '' },
-    resolution: { textSize: '', weight: '' },
+  if (examples.length === 0) return null
+
+  const toggleVisibility = (index) => {
+    const updatedExamples = [...examples]
+    updatedExamples[index].visible = !updatedExamples[index].visible
+    setExamples(updatedExamples)
   }
+
+  return (
+    <>
+      {examples.map(({ id, name, answer, visible, resolution }, index) => (
+        <div className="flex flex-col items-start px-2 my-2 ml-3 border-l-4 border-lotus-800" key={index}>
+          <span className="text-[#f83c86] py-2 font-bold text-lg">
+            {id} Ejercicio: {name}
+          </span>
+          <span className="ml-2 py-2 text-lg">{answer}</span>
+          {visible && (
+            <div className="px-2 flex flex-col gap-2 items-center justify-center self-center">
+              {resolution?.map((item, index) => (
+                <span className="text-waikawa-gray-800 text-lg" key={index}>
+                  {item}
+                </span>
+              ))}
+            </div>
+          )}
+          <button onClick={() => toggleVisibility(index)}>
+            {visible ? <Buttton button={buttons.active} /> : <Buttton button={buttons.inactive} />}
+          </button>
+        </div>
+      ))}
+    </>
+  )
+}
+
+const Buttton = ({ button }) => {
+  const { icon, text, style } = button
+  return (
+    <div className={`flex flex-row gap-2 items-center ${style}`}>
+      <FontAwesomeIcon icon={icon} />
+      <span>{text}</span>
+    </div>
+  )
+}
+
+Buttton.propTypes = {
+  button: PropTypes.shape({
+    icon: PropTypes.shape({}),
+    text: PropTypes.string,
+    style: PropTypes.string,
+  }),
+}
+
+Example.propTypes = {
+  example: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string,
+      answer: PropTypes.string,
+      visible: PropTypes.bool.isRequired,
+      image: PropTypes.string,
+      resolution: PropTypes.arrayOf(PropTypes.string).isRequired,
+      res: PropTypes.string,
+    }),
+  ).isRequired,
+}
+
+const Functions = () => {
+  const { colors, fonts } = styleFunctions
 
   return (
     <div className="pr-3">
@@ -73,6 +160,8 @@ const Functions = () => {
           <Text id={funcIndex + 1} content={topic} color={colors.topic} fonts={fonts.topic} />
 
           <Text content={description} color={colors.text} fonts={fonts.text} />
+
+          <Example example={example} />
 
           {subtopic.map(({ subtopic, notation }, subtopicIndex) => (
             <div key={subtopicIndex} className="flex flex-col">
@@ -113,3 +202,39 @@ Notation.propTypes = {
 }
 
 export default Functions
+
+// <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+// <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+// Purple to blue
+// </span>
+// </button>
+// <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+// <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+// Cyan to blue
+// </span>
+// </button>
+// <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
+// <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+// Green to blue
+// </span>
+// </button>
+// <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+// <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+// Purple to pink
+// </span>
+// </button>
+// <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+// <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+// Pink to orange
+// </span>
+// </button>
+// <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-lime-800">
+// <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+// Teal to Lime
+// </span>
+// </button>
+// <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
+// <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+// Red to Yellow
+// </span>
+// </button>
