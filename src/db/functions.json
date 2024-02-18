@@ -53,6 +53,26 @@
             }
           ]
         }
+      ],
+      "example": [
+        {
+          "id": 1,
+          "name": "Rango",
+          "answer": "Calcular el rango de la función",
+          "visible": true,
+          "image": "",
+          "resolution": ["a", "b", "c"],
+          "res": ""
+        },
+        {
+          "id": 2,
+          "name": "Dominio",
+          "answer": "Calcular el dominio de la función",
+          "visible": false,
+          "image": "",
+          "resolution": ["x", "y", "z"],
+          "res": ""
+        }
       ]
     },
     {
@@ -71,6 +91,17 @@
               "id": 1,
               "name": "f(x) = c",
               "details": ["f(x) es la notación de la función.", "x es la variable independiente", "c es una constante, es decir, un número fijo"]
+            }
+          ],
+          "example": [
+            {
+              "id": 1,
+              "name": "fn",
+              "answer": "one description",
+              "visible": true,
+              "image": "",
+              "resolution": ["min", "medium", "max"],
+              "res": ""
             }
           ]
         },
