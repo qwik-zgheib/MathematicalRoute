@@ -34,7 +34,6 @@ const Notation = ({ notation }) => {
           <div className="flex flex-col items-start px-2 my-2 ml-3 border-l-4 border-lotus-800" key={index}>
             <span className="text-[#f83c86] py-2 font-bold text-lg">{count ? id : null} Notación:</span>
             <span className="ml-2 px-4 py-2 font-medium text-xl bg-slate-300">{name}</span>
-            <FontAwesomeIcon icon={faCircleChevronDown} className="text-sm w-2 h-2 bg-green-500" />
             {details.map((item, index) => (
               <div className="px-2 flex gap-2 items-center justify-center" key={index}>
                 <FontAwesomeIcon icon={faCircle} className="text-sm w-2 h-2" />
@@ -47,30 +46,10 @@ const Notation = ({ notation }) => {
   )
 }
 
-const example = [
-  {
-    id: 1,
-    name: 'Rango',
-    answer: 'Calcular el rango de la función',
-    visible: true,
-    image: '',
-    resolution: ['a', 'b', 'c'],
-    res: '',
-  },
-  {
-    id: 2,
-    name: 'Dominio',
-    answer: 'Calcular el dominio de la función',
-    visible: false,
-    image: '',
-    resolution: ['x', 'y', 'z'],
-    res: '',
-  },
-]
 const Example = ({ example }) => {
   const [examples, setExamples] = useState(example.filter((item) => item.name !== ''))
 
-  const buttons = {
+  const styles = {
     active: {
       icon: faCircleChevronUp,
       text: 'Ocultar resolución',
@@ -109,7 +88,7 @@ const Example = ({ example }) => {
             </div>
           )}
           <button onClick={() => toggleVisibility(index)}>
-            {visible ? <Buttton button={buttons.active} /> : <Buttton button={buttons.inactive} />}
+            {visible ? <Buttton button={styles.active} /> : <Buttton button={styles.inactive} />}
           </button>
         </div>
       ))}
@@ -155,19 +134,22 @@ const Functions = () => {
   return (
     <div className="pr-3">
       <h1 className="text-3xl text-waikawa-gray-950 font-bold px-5">Funciones</h1>
-      {dataFunctions.functions.map(({ id, topic, description, subtopic }, funcIndex) => (
+      {dataFunctions.functions.map(({ id, topic, description, subtopic, example }, funcIndex) => (
         <div key={id} className="pt-4">
           <Text id={funcIndex + 1} content={topic} color={colors.topic} fonts={fonts.topic} />
 
           <Text content={description} color={colors.text} fonts={fonts.text} />
 
-          <Example example={example} />
+          {example && <Example example={example} />}
 
-          {subtopic.map(({ subtopic, notation }, subtopicIndex) => (
+          {subtopic.map(({ subtopic, characteristic, notation, example }, subtopicIndex) => (
             <div key={subtopicIndex} className="flex flex-col">
               <Text content={subtopic} color={colors.subtopic} fonts={fonts.subtopic} />
+              <span>{characteristic}</span>
 
               <Notation notation={notation} />
+
+              {example && <Example example={example} />}
             </div>
           ))}
         </div>
