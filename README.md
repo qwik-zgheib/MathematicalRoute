@@ -1,8 +1,19 @@
-# React + Vite
+# Instalar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. github desktop
+2. node.js
+3.
 
-Currently, two official plugins are available:
+## Extensiones para VS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Prettier
+2. eslint
+3. errorlens
+4. tailwind css <br>
+
+# Actividades
+
+**Chritian**:Codigo SSH y dominio los mejores metodos y más baratos.<br>
+**Carlos**: Investigar como poner anuncios en una pagina web.<br>
+**Luis Fernando**:Avanzar el diseño<br>
+**Isais**:Funcionalidad.<br>
