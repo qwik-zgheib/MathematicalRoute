@@ -1,8 +1,12 @@
 {
   "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
   "plugins": ["react", "prettier"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
     "react/react-in-jsx-scope": "off"
   },
   "parserOptions": {

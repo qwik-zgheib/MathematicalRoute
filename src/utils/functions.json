@@ -1,0 +1,20 @@
+{
+  "colors": {
+    "topic": { "text": "text-lotus-800", "num": "text-lotus-900" },
+    "subtopic": { "text": "text-lotus-800" },
+    "text": { "text": "text-waikawa-gray-900" },
+    "property": { "text": "" },
+    "example": { "text": "" },
+    "exercise": { "text": "" },
+    "resolution": { "text": "" }
+  },
+  "fonts": {
+    "topic": { "textSize": "text-2xl", "weight": "font-bold", "height": "h-14", "numSize": "text-3xl" },
+    "subtopic": { "textSize": "text-xl", "weight": "font-semibold", "height": "h-12" },
+    "text": { "textSize": "text-base", "weight": "font-normal", "height": "h-auto" },
+    "property": { "textSize": "text-base  ", "weight": "" },
+    "example": { "textSize": "", "weight": "" },
+    "exercise": { "textSize": "", "weight": "" },
+    "resolution": { "textSize": "", "weight": "" }
+  }
+}

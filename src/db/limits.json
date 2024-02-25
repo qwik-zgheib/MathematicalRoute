@@ -1,0 +1,44 @@
+{
+  "limits": [
+    {
+      "id": 1,
+      "topic": "Límites Básicos",
+      "name": "basiclimits",
+      "description": "Conceptos fundamentales sobre límites.",
+      "subtopic": [
+        {
+          "id": 1,
+          "name": "Límite en un punto",
+          "formula": "lim (x -> a) f(x) = L",
+          "properties": ["Si el límite existe, es único.", "El límite puede ser igual o no existir."]
+        },
+        {
+          "id": 2,
+          "name": "Límite infinito",
+          "formula": "lim (x -> a) f(x) = ±∞",
+          "properties": ["El límite se acerca a infinito positivo o negativo."]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "topic": "Reglas de Límites",
+      "name": "boundaryrules",
+      "description": "Reglas comunes para evaluar límites.",
+      "subtopic": [
+        {
+          "id": 1,
+          "name": "Límite de suma/resta",
+          "formula": "lim (x -> a) [f(x) ± g(x)] = lim (x -> a) f(x) ± lim (x -> a) g(x)",
+          "properties": ["Se pueden separar límites de funciones sumadas o restadas."]
+        },
+        {
+          "id": 2,
+          "name": "Límite de producto",
+          "formula": "lim (x -> a) [f(x) * g(x)] = lim (x -> a) f(x) * lim (x -> a) g(x)",
+          "properties": ["Se pueden separar límites de funciones multiplicadas."]
+        }
+      ]
+    }
+  ]
+}

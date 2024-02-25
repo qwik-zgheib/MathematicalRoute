@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.navbar_logo {
+  width: 3rem;
+  height: 3rem;
+}
+
+.navbar_logo:hover {
+  @apply animate-pulse;
+}
+
+.navbar_title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.navbar_actions {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
